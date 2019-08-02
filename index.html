@@ -1,11 +1,24 @@
 <html>
-    <head>
-        <title>Camera Test</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-  
-    <body>
-        <input type="file" accept="image/*" capture="camera" />
-    </body>
+  <head>
+    <title>Camera Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <input type="file" accept="image/*" capture="camera" id="files" />
+    <img id="image" />
+    <script>
+      document.getElementById("files").onchange = function() {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          // get loaded data and render thumbnail.
+          document.getElementById("image").src = e.target.result;
+        };
+
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+      };
+    </script>
+  </body>
 </html>
