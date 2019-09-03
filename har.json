@@ -1,23 +1,57 @@
-
 {
-    "method": "POST",
-    "url": "http://mockbin.com/request",
-    "httpVersion": "HTTP/1.1",
-    "queryString": [
-      { "name": "foo", "value": "bar" },
-      { "name": "foo", "value": "baz" }
-    ],
-    "headers": [
-      { "name": "Accept", "value": "application/json" },
-      { "name": "Content-Type", "value": "application/json" }
-    ],
-    "cookies":  [
-      { "name": "foo", "value": "bar" },
-      { "name": "bar", "value": "baz" }
-    ],
-    "postData": {
-      "mimeType": "application/json",
-      "text": "{\"foo\": \"bar\"}"
+  "method": "POST",
+  "url": "https://testapi.spacebank.ge/api/v1/qr/create",
+  "httpVersion": "HTTP/1.1",
+  "queryString": [
+    {
+      "Data": {
+        "MerchantName": "Megamall",
+        "PhoneNumber": "599112233",
+        "GrandTotalAmount": 1830,
+        "DiscountAmount": 50,
+        "TotalAmount": 1780,
+        "OrderId": "20181213V02",
+        "Type": 1,
+        "Products": [
+          {
+            "Title": "Ticket:",
+            "Model": "1",
+            "Quantity": 1,
+            "Amount": 250,
+            "ImageUrl": "http://www.picz.ge/img/s4/1811/20/5/56f04b4e03d4.png"
+          },
+          {
+            "Title": "Samsung",
+            "Model": "s8",
+            "Quantity": 1,
+            "Amount": 1500,
+            "ImageUrl": "http://www.picz.ge/img/s3/1811/20/c/cdfb5edfa323.png"
+          },
+          {
+            "Title": "Motorola",
+            "Model": "v3",
+            "Quantity": 2,
+            "Amount": 25,
+            "ImageUrl": "http://www.picz.ge/img/s1/1811/20/3/35b1d9130ba7.png"
+          },
+          {
+            "Title": "Transportation",
+            "Model": "",
+            "Quantity": 1,
+            "Amount": 30,
+            "ImageUrl": "http://www.picz.ge/img/s3/1811/20/2/2b974ea2e14c.png"
+          }
+        ],
+        "Secret": "a0228e20-b654-4f7b-80a6-925e77f39f32"
+      }
     }
+  ],
+  "headers": [
+    { "name": "Accept", "value": "application/json" },
+    { "name": "Content-Type", "value": "application/json" }
+  ],
+  "postData": {
+    "mimeType": "application/json",
+    "text": "{  \n            \"Data\":{  \n               \"MerchantName\":\"Megamall\",\n               \"PhoneNumber\":\"599112233\",\n               \"GrandTotalAmount\":1830,\n               \"DiscountAmount\": 50,\n               \"TotalAmount\":1780,\n               \"OrderId\":\"20181213V02\",\n               \"Type\":1,\n               \"Products\":[  \n                  {  \n                     \"Title\":\"Ticket:\",\n                     \"Model\":\"1\",\n                     \"Quantity\":1,\n                     \"Amount\":250,\n                     \"ImageUrl\":\"http://www.picz.ge/img/s4/1811/20/5/56f04b4e03d4.png\"\n                  },\n                  {  \n                     \"Title\":\"Samsung\",\n                     \"Model\":\"s8\",\n                     \"Quantity\":1,\n                     \"Amount\":1500,\n                     \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/c/cdfb5edfa323.png\"\n                  },\n                  {  \n                     \"Title\":\"Motorola\",\n                     \"Model\":\"v3\",\n                     \"Quantity\":2,\n                     \"Amount\":25,\n                     \"ImageUrl\":\"http://www.picz.ge/img/s1/1811/20/3/35b1d9130ba7.png\"\n                  },\n                  {  \n                     \"Title\": \"Transportation\",\n                     \"Model\":\"\",\n                     \"Quantity\":1,\n                     \"Amount\":30,\n                     \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/2/2b974ea2e14c.png\"\n                  }\n               ],\n               \"Secret\":\"a0228e20-b654-4f7b-80a6-925e77f39f32\"\n            }\n         }"
   }
-  
+}
