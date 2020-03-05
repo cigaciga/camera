@@ -52,6 +52,31 @@
   ],
   "postData": {
     "mimeType": "application/json",
-    "text": "{              \"Data\":{                 \"MerchantName\":\"Megamall\",               \"PhoneNumber\":\"599112233\",               \"GrandTotalAmount\":1830,               \"DiscountAmount\": 50,               \"TotalAmount\":1780,               \"OrderId\":\"20181213V02\",               \"Type\":1,               \"Products\":[                    {                       \"Title\":\"Ticket:\",                     \"Model\":\"1\",                     \"Quantity\":1,                     \"Amount\":250,                     \"ImageUrl\":\"http://www.picz.ge/img/s4/1811/20/5/56f04b4e03d4.png\"                  },                  {                       \"Title\":\"Samsung\",                     \"Model\":\"s8\",                     \"Quantity\":1,                     \"Amount\":1500,                     \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/c/cdfb5edfa323.png\"                  },                  {                       \"Title\":\"Motorola\",                     \"Model\":\"v3\",                     \"Quantity\":2,                     \"Amount\":25,                     \"ImageUrl\":\"http://www.picz.ge/img/s1/1811/20/3/35b1d9130ba7.png\"                  },                  {                       \"Title\": \"Transportation\",                     \"Model\":\"\",                     \"Quantity\":1,                     \"Amount\":30,                     \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/2/2b974ea2e14c.png\"                  }               ],               \"Secret\":\"a0228e20-b654-4f7b-80a6-925e77f39f32\"            }         }"
+    "text": "{\"Data\":{   \"MerchantName\":\"Megamall\", \"PhoneNumber\":\"599112233\", \"GrandTotalAmount\":1830, \"DiscountAmount\": 50, \"TotalAmount\":1780, \"OrderId\":\"20181213V02\", \"Type\":1, \"Products\":[      {         \"Title\":\"Ticket:\",       \"Model\":\"1\",       \"Quantity\":1,       \"Amount\":250,       \"ImageUrl\":\"http://www.picz.ge/img/s4/1811/20/5/56f04b4e03d4.png\"    },    {         \"Title\":\"Samsung\",       \"Model\":\"s8\",       \"Quantity\":1,       \"Amount\":1500,       \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/c/cdfb5edfa323.png\"    },    {         \"Title\":\"Motorola\",       \"Model\":\"v3\",       \"Quantity\":2,       \"Amount\":25,       \"ImageUrl\":\"http://www.picz.ge/img/s1/1811/20/3/35b1d9130ba7.png\"    },    {         \"Title\": \"Transportation\",       \"Model\":\"\",       \"Quantity\":1,       \"Amount\":30,       \"ImageUrl\":\"http://www.picz.ge/img/s3/1811/20/2/2b974ea2e14c.png\"    } ], \"Secret\":\"a0228e20-b654-4f7b-80a6-925e77f39f32\"}}"
   }
 }
+
+
+
+{
+    "method": "POST",
+    "url": "http://mockbin.com/request",
+    "httpVersion": "HTTP/1.1",
+    "queryString": [
+      { "name": "foo", "value": "bar" },
+      { "name": "foo", "value": "baz" }
+    ],
+    "headers": [
+      { "name": "Accept", "value": "application/json" },
+      { "name": "Content-Type", "value": "application/json" }
+    ],
+    "cookies":  [
+      { "name": "foo", "value": "bar" },
+      { "name": "bar", "value": "baz" }
+    ],
+    "postData": {
+      "mimeType": "application/json",
+      "text": "{\"foo\": \"bar\"}"
+    }
+  }
+  
