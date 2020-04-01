@@ -16,31 +16,33 @@
         });
         
         window.addEventListener('message', (event) => {
-            console.log(event.data);
-            refLinkData = event.data;
+            if (event.data.message === 'success') {
+                   console.log("send success");
+                }
         });
 
 
         
             function sendSMS(form) {
-                var phone = form.phone.value;
-                var linkData = {
+                window.parent.postMessage({message:"send",number:form.phone.value},"*");
+                // var phone = form.phone.value;
+                // var linkData = {
                    
-                    channel: refLinkData.data_parsed['~channel'],
-                    feature: refLinkData.data_parsed['~feature'],
+                //     channel: refLinkData.data_parsed['~channel'],
+                //     feature: refLinkData.data_parsed['~feature'],
                     
-                };
-                var options = {};
-                var callback = function(err, result) {
-                    if (err) {
-                        alert("Sorry, something went wrong.");
-                    }
-                    else {
-                        alert("SMS sent!");
-                    }
-                };
-                branch.sendSMS(phone, linkData, options, callback);
-                form.phone.value = "";
+                // };
+                // var options = {};
+                // var callback = function(err, result) {
+                //     if (err) {
+                //         alert("Sorry, something went wrong.");
+                //     }
+                //     else {
+                //         alert("SMS sent!");
+                //     }
+                // };
+                // branch.sendSMS(phone, linkData, options, callback);
+                // form.phone.value = "";
             }
     </script>
   </head>
