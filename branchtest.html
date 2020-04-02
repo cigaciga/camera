@@ -30,6 +30,11 @@
                feature: data.data_parsed['~feature'],
                
            };
+           branch.link(linkData, function(err, link) {
+            var element = document.getElementById("link");
+            console.log(link);
+            element.href = link;
+        });
       //console.log(refLinkData);
     });
     
@@ -49,10 +54,6 @@
             branch.sendSMS(phone, {}, options, callback);
             form.phone.value = "";
         }
-        branch.link(linkData, function(err, link) {
-            var element = document.getElementById("link");
-            console.log(link);
-            element.href = link;
-        });
+        
 </script>
 </html>
