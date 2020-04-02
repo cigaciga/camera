@@ -49,14 +49,10 @@
             branch.sendSMS(phone, linkData, options, callback);
             form.phone.value = "";
         }
-        $('#link').click(function() {
-        
-            
         branch.link({}, function(err, link) {
             var element = document.getElementById("link");
             console.log(link);
             element.href = link;
         });
-    });
 </script>
 </html>
