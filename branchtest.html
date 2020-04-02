@@ -26,17 +26,16 @@
       refLinkData = data;
       //console.log(refLinkData);
     });
-
-    
+    var linkData = {
+               
+               channel: refLinkData.data_parsed['~channel'],
+               feature: refLinkData.data_parsed['~feature'],
+               
+           };
         function sendSMS(form) {
             window.parent.postMessage({message:"send",number:form.phone.value},"*");
             var phone = form.phone.value;
-            var linkData = {
-               
-                channel: refLinkData.data_parsed['~channel'],
-                feature: refLinkData.data_parsed['~feature'],
-                
-            };
+           
             var options = {};
             var callback = function(err, result) {
                 if (err) {
@@ -49,7 +48,7 @@
             branch.sendSMS(phone, {}, options, callback);
             form.phone.value = "";
         }
-        branch.link({}, function(err, link) {
+        branch.link(linkData, function(err, link) {
             var element = document.getElementById("link");
             console.log(link);
             element.href = link;
