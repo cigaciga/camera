@@ -37,6 +37,14 @@
                 branch.sendSMS(phone, linkData, options, callback);
                 form.phone.value = "";
             }
+            $('#link').click(function() {
+            
+                
+			branch.link({}, function(err, link) {
+                var element = document.getElementById("link");
+                element.setAttribute("href",link);
+			});
+		});
     </script>
   </head>
 
@@ -47,5 +55,6 @@
             <br/>
             <input type="submit"/>
         </form>
+        <a href="#" id="link">Link</a>
   </body>
 </html>
